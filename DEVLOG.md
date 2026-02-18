@@ -9,3 +9,37 @@ Observations:
 
 Next Goal:
 - Build SessionLoader (Data Layer)
+
+
+
+
+
+Day 2 – SessionLoader Implementation
+
+Objective:
+Design and implement the data loading layer for the application.
+
+Work Completed:
+- Created SessionLoader class inside data/loader.py
+- Added __init__ method to store year, round number, and session type
+- Designed enable_cache() method (placeholder for now)
+- Implemented load() method to:
+    • Call enable_cache()
+    • Fetch session using fastf1.get_session()
+    • Load session data using session.load()
+    • Store session in self.session
+    • Return loaded session object
+- Verified session loading from main.py
+
+Observations:
+- Understood that FastF1 requires explicit session.load() call
+- Learned importance of storing session internally for reuse
+- Clarified separation between preparation, loading, and returning data
+
+Improvements Needed:
+- Implement proper cache enabling logic
+- Add error handling (try/except) for invalid year or round
+- Follow Python naming conventions strictly (method names lowercase)
+
+Next Goal (Day 3):
+Extract driver telemetry data and design TelemetryProcessor module.
