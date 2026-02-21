@@ -43,3 +43,32 @@ Improvements Needed:
 
 Next Goal (Day 3):
 Extract driver telemetry data and design TelemetryProcessor module.
+
+
+
+
+
+Day 3 – Telemetry Processing Layer
+
+Objective:
+Design and implement telemetry extraction and preprocessing pipeline.
+
+Work Completed:
+- Explored FastF1 session structure
+- Retrieved drivers list and lap data
+- Extracted telemetry for individual drivers
+- Identified required telemetry columns (Time, X, Y)
+- Designed TelemetryProcessor class
+- Implemented telemetry extraction, filtering, and cleaning
+- Converted Time column to numeric seconds
+- Stored processed telemetry in structured dictionary
+- Verified processor output from main.py
+
+Observations:
+- FastF1 telemetry is accessed through laps
+- Raw telemetry contains NaN values requiring cleaning
+- Time normalization is essential for simulation engines
+- Dictionary structure simplifies future replay logic
+
+Next Goal (Day 4):
+Design RaceEngine to simulate time progression and driver movement.
