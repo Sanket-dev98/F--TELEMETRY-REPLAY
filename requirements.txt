@@ -1,3 +1,4 @@
 fastf1
-arcade
 numpy
+pandas
+arcade

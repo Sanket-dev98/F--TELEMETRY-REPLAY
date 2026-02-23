@@ -72,3 +72,78 @@ Observations:
 
 Next Goal (Day 4):
 Design RaceEngine to simulate time progression and driver movement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Project: F1 Telemetry Replay Engine
+Status: Paused
+
+Summary:
+This project aimed to build a desktop application that replays Formula 1 races using telemetry data from FastF1. The system was designed with a modular architecture separating data loading, telemetry preprocessing, simulation engine logic, and rendering.
+
+Work Completed:
+- Implemented SessionLoader to load and cache FastF1 race sessions
+- Explored FastF1 data structure including drivers, laps, and telemetry
+- Designed and implemented TelemetryProcessor for:
+    • multi-driver telemetry extraction
+    • data cleaning
+    • time normalization
+    • structured telemetry storage
+- Built RaceEngine with:
+    • time progression logic
+    • playback speed control
+    • closest timestamp lookup
+    • interpolation-based position retrieval
+- Implemented basic Arcade renderer for visual replay
+- Integrated multi-driver movement visualization
+- Established Git workflow and structured project architecture
+
+Observations:
+- FastF1 telemetry is lap-dependent and requires preprocessing
+- Time normalization is essential for simulation-based replay
+- Rendering requires coordinate scaling and smoothing for usability
+- Arcade rendering API changes introduced compatibility challenges
+- Building a replay engine requires careful performance and interpolation design
+
+Limitations:
+- Basic rendering only (no real track map)
+- No leaderboard overlay
+- No camera follow mode
+- No replay scrubbing controls
+- No performance optimization
+- UI/UX incomplete
+
+Reason for Pause:
+- Project complexity exceeded current interest level
+- Focus shift toward other learning priorities
+- Rendering layer required additional refinement effort
+
+Future Improvements (If Resumed):
+- Real track map rendering
+- Smooth interpolation improvements
+- Leaderboard overlay
+- Camera follow mode
+- Playback timeline slider
+- Driver color mapping
+- Packaging as executable
+
+Lessons Learned:
+- Modular architecture design for simulation projects
+- Working with real telemetry datasets
+- Time-based simulation engine fundamentals
+- Importance of preprocessing pipelines
+- Basic game loop and rendering architecture
+- Debugging third-party library API changes
+
+Next Step:
+Project paused but preserved for future continuation or reference.

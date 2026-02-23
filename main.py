@@ -1,17 +1,16 @@
 from data.loader import SessionLoader
+from data.preprocessor import TelemetryProcessor
+from engine.race_engine import RaceEngine
+from render.arcade_renderer import ReplayWindow
+import arcade
 
-loader = SessionLoader(2024 , 1 , "R")
+loader = SessionLoader(2024, 1, "R")
 session = loader.load()
-print(session.drivers)
 
-driver = session.drivers[0]
-print(driver)
+processor = TelemetryProcessor(session)
+telemetry_data = processor.process()
 
-laps = session.laps.pick_drivers(driver)
-print(laps.head())
+engine = RaceEngine(telemetry_data)
 
-telemetry = laps.get_telemetry()
-print(telemetry.head())
-print(telemetry.columns)
-
-print(session.drivers)
+window = ReplayWindow(engine)
+arcade.run()
